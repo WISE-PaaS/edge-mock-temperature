@@ -1,0 +1,11 @@
+---
+applications:   
+- name: edge-mocktemp-worker-1.0.0
+  memory: 64M
+  disk_quota: 256M
+  instances: 1
+  buildpack: NodeJS_v1-6-24
+  health-check-type: process
+  timeout: 10
+  services:
+   - rabbitmq
