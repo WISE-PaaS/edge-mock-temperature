@@ -8,9 +8,12 @@ const mqtt = require('mqtt')
 
 /** 
  * Use credentials directly from local device
+ * Ispect the credentials inside the secret and fill out the following variables.
  */
-// externalHosts: rabbitmq-001-pub.sa.wise-paas.com
-const mqttUri = 'mqtt://eb869bc9-31f7-46dd-928b-4c6e08a65302%3Aad063d1e-2ae5-4566-94c3-1a513b19ed73:s6jX0eEiuvpclN3C5EWv9qIhG@wise-msghub.eastasia.cloudapp.azure.com:1883';
+const username = '';
+const password = '';
+const externalHosts = 'rabbitmq-001-pub.sa.wise-paas.com';
+const mqttUri = `mqtt://${username}:${password}@${externalHosts}:1883`;
 
 /** 
  * Connects to the IoTHub service using MQTT URI
