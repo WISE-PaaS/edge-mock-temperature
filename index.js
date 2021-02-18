@@ -12,7 +12,13 @@ const mqtt = require('mqtt')
  */
 const username = '';
 const password = '';
+
+// SA DataCenter
 const externalHosts = 'rabbitmq-001-pub.sa.wise-paas.com';
+
+// HZ DataCenter
+// const externalHosts = 'rabbitmq-001-pub.hz.wise-paas.com.cn';
+
 const mqttUri = `mqtt://${username}:${password}@${externalHosts}:1883`;
 
 /** 
