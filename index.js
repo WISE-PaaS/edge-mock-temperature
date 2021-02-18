@@ -26,12 +26,12 @@ client.on('connect', (connack) => {
 });
 
 /** 
- * Publish mock random temperature periodically
+ * Publish mock random temperature periodically, Please fill in your own number 
  */
 function publishMockTemp() {
   const temp = Math.floor((Math.random() * 8) + 22);
 
-  client.publish('livingroom/temperature', temp.toString(), { qos: 0 }, (err, packet) => {
+  client.publish('livingroom/temperature/{User number}', temp.toString(), { qos: 0 }, (err, packet) => {
     if (!err) console.log('Data sent to livingroom/temperature -- ' + temp);
   });
 }
