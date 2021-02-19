@@ -9,4 +9,4 @@ This app keeps publishing mock temperature data through WISE-PaaS IoT-Hub to sim
 ![number](./img/number.png)
 
 ## Confirm your ien number
-![own number](./img/own number.png)
+![ChechNumber](./img/ChechNumber.png)
