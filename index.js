@@ -33,7 +33,7 @@ client.on('connect', (connack) => {
  */
 function publishMockTemp() {
   const temp = Math.floor((Math.random() * 8) + 22);
-// Please fill in your own number, user can check it in the pod, use $kubectl logs -f pod_name
+// Please fill in your own number, user can check it in in your mqtt pod, use $kubectl logs -f pod_name
   client.publish('livingroom/temperature/{own number}', temp.toString(), { qos: 0 }, (err, packet) => {
     if (!err) console.log('Data sent to livingroom/temperature -- ' + temp);
   });
