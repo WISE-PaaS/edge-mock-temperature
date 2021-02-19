@@ -10,14 +10,11 @@ const mqtt = require('mqtt')
  * Use credentials directly from local device
  * Ispect the credentials inside the secret and fill out the following variables.
  */
+// ---mqtt---
 const username = '';
 const password = '';
+const externalHosts = '';
 
-// SA DataCenter
-const externalHosts = 'rabbitmq-001-pub.sa.wise-paas.com';
-
-// HZ DataCenter
-// const externalHosts = 'rabbitmq-001-pub.hz.wise-paas.com.cn';
 
 const mqttUri = `mqtt://${username}:${password}@${externalHosts}:1883`;
 
@@ -32,12 +29,12 @@ client.on('connect', (connack) => {
 });
 
 /** 
- * Publish mock random temperature periodically, Please fill in your own number 
+ * Publish mock random temperature periodically 
  */
 function publishMockTemp() {
   const temp = Math.floor((Math.random() * 8) + 22);
-
-  client.publish('livingroom/temperature/{User number}', temp.toString(), { qos: 0 }, (err, packet) => {
+// Please fill in your own number, user can check it in the pod, use $kubectl logs -f pod_name
+  client.publish('livingroom/temperature/{own number}', temp.toString(), { qos: 0 }, (err, packet) => {
     if (!err) console.log('Data sent to livingroom/temperature -- ' + temp);
   });
 }
