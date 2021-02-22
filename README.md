@@ -18,7 +18,7 @@ kubectl get secret {secret_name}  -o jsonpath="{.data.ENSAAS_SERVICES}" | base64
 
 ## 2. Confirm your own number
 check your pod logs will get your own number
-
+![CheckNumber](./img/CheckNumber.png)
 
 ## 3. Fill in your number and push messages to your topic
 ![number](./img/number.png)
