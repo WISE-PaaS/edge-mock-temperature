@@ -11,7 +11,7 @@ kubectl get secret {secret_name}  -o jsonpath="{.data.ENSAAS_SERVICES}" | base64
 ![decode](./img/decode.png)
 
 2. Save as json format in vscode
-![secret](./img/secret.png)
+
 
 3. Set up MQTT credentials 
 ![mqtt](./img/mqtt.png)
