@@ -6,10 +6,10 @@ This app keeps publishing mock temperature data through WISE-PaaS IoT-Hub to sim
 ![mqtt](./img/mqtt.png)
 
 ## 2. Confirm your own number
-log your pod name and you will get own number
+check your pod logs will get your own number
 ![ChechNumber](./img/ChechNumber.png)
 
-## 3. Fill in your number, mqtt can send to the correct topic
+## 3. Fill in your number and push messages to your topic
 ![number](./img/number.png)
 
 
